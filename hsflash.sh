@@ -10,7 +10,7 @@ echo -e "${GREEN}███████║███████╗   ████
 echo -e "${GREEN}██╔══██║╚════██║   ██╔══╝  ██║     ██╔══██║╚════██║██╔══██║"
 echo -e "${GREEN}██║  ██║███████║██╗██║     ███████╗██║  ██║███████║██║  ██║"
 echo -e "${GREEN}╚═╝  ╚═╝╚══════╝╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝"
-echo -e "${WHITE}                  * HOTSPOT FLASH EZ *${NC}"
+echo -e "${WHITE}              * HOTSPOT FLASH EZ (0.2) *${NC}"
 echo ""
 
 # GPIO pin assignments
