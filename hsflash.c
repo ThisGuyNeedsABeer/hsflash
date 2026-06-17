@@ -10,7 +10,7 @@ void print_banner() {
     printf("██╔══██║╚════██║   ██╔══╝  ██║     ██╔══██║╚════██║██╔══██║\n");
     printf("██║  ██║███████║██╗██║     ███████╗██║  ██║███████║██║  ██║\n");
     printf("╚═╝  ╚═╝╚══════╝╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝\n");
-    printf("                  * HOTSPOT FLASH EZ *\n\n");
+    printf("                * HOTSPOT FLASH EZ (0.2) *\n\n ");
 }
 
 int file_exists(const char *filename) {
