@@ -19,7 +19,7 @@ int file_exists(const char *filename) {
 
 void set_gpio(const char *pin, const char *mode, const char *level) {
     char cmd[128];
-    snprintf(cmd, sizeof(cmd), "sudo raspi-gpio set %s %s %s", pin, mode, level);
+    snprintf(cmd, sizeof(cmd), "sudo pinctrl set %s %s %s", pin, mode, level);
     system(cmd);
 }
 

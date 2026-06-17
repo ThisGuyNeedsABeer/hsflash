@@ -79,14 +79,14 @@ fi
 echo ""
 echo "[INFO] Proceeding with firmware flash setup..."
 echo "[INFO] Setting BOOT0 high (GPIO$BOOT0)..."
-sudo raspi-gpio set $BOOT0 op dh
+sudo pinctrl set $BOOT0 op dh
 
 echo "[INFO] Asserting reset (GPIO$NRST low)..."
-sudo raspi-gpio set $NRST op dl
+sudo pinctrl set $NRST op dl
 sleep 0.1
 
 echo "[INFO] Releasing reset (GPIO$NRST high)..."
-sudo raspi-gpio set $NRST op dh
+sudo pinctrl set $NRST op dh
 sleep 0.2  # Give time to enter bootloader
 
 echo "[INFO] Flashing firmware..."
@@ -95,12 +95,12 @@ sudo stm32flash -v -w "$BIN_FILE" -R "$SERIAL_PORT"
 FLASH_STATUS=$?
 
 echo "[INFO] Setting BOOT0 low (GPIO$BOOT0)..."
-sudo raspi-gpio set $BOOT0 op dl
+sudo pinctrl set $BOOT0 op dl
 
 echo "[INFO] Resetting MCU to boot from flash..."
-sudo raspi-gpio set $NRST op dl
+sudo pinctrl set $NRST op dl
 sleep 0.1
-sudo raspi-gpio set $NRST op dh
+sudo pinctrl set $NRST op dh
 
 if [ $FLASH_STATUS -eq 0 ]; then
     echo -e "${GREEN}[SUCCESS] Flashing complete and STM32 restarted successfully.${NC}"
